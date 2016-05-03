@@ -4,27 +4,40 @@ body {
 }
 
 .quote {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
   margin: 3em;
 }
 
 /* We tell all items to be 100% width */
 .triangle-isosceles, .cookieContainer, footer {
-  flex: 1 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 100%;
+      -ms-flex: 1 100%;
+          flex: 1 100%;
   }
 
 .triangle-isosceles {
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position:relative;
   padding: 2em 0;
   margin:0;
   color:#000;
-  background:#fff; 
-  -webkit-border-radius:10px;
-  -moz-border-radius:10px;
+  background:#fff;
   border-radius:10px;
 }
 
@@ -48,10 +61,21 @@ h1 {
 }
 
 blockquote {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 0;
+  letter-spacing: 1px;
   letter-spacing: .1rem;
 }
 
@@ -63,8 +87,10 @@ button {
   font-size: 11px;
   font-weight: 600;
   height: 38px;
+  letter-spacing: 1px;
   letter-spacing: .1rem;
   line-height: 38px;
+  margin-top: 16px;
   margin-top: 1rem;
   padding: 0 30px;
   text-transform: uppercase;
@@ -83,13 +109,16 @@ button:hover{
 }
 
 footer p{
+  margin-top: 32px;
   margin-top: 2rem;
 }
 
 a {
   text-decoration: none;
   color: white;
+  letter-spacing: 1px;
   letter-spacing: .1rem;
+  font-size: 11px;
   font-size: 0.7rem;
 }
 
@@ -97,13 +126,19 @@ a:hover {
    text-decoration: underline;
 }
 
-@media all and (min-width: 600px) {
+@media (min-width: 550px) {
     /* We tell cookie and isosceles triangle to share a row */
   .cookieContainer {
-    flex: 1 auto;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 auto;
+        -ms-flex: 1 auto;
+            flex: 1 auto;
   }
   .triangle-isosceles{
-    flex: 1 auto;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 auto;
+        -ms-flex: 1 auto;
+            flex: 1 auto;
   }
 }
 
