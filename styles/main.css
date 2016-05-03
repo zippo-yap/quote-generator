@@ -1,6 +1,7 @@
 body {
   background: #FF7A00;
   color: white;
+  margin: 3em;
 }
 
 .quote {
@@ -8,34 +9,28 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  -webkit-flex-flow: row;
+      -ms-flex-flow: row;
+          flex-flow: row;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  margin: 3em;
 }
-
-/* We tell all items to be 100% width */
-.triangle-isosceles, .cookieContainer, footer {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 100%;
-      -ms-flex: 1 100%;
-          flex: 1 100%;
-  }
 
 .triangle-isosceles {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-flex-direction: row wrap;
+      -ms-flex-direction: row wrap;
+          flex-direction: row wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position:relative;
   padding: 2em 0;
-  margin:0;
   color:#000;
   background:#fff;
   border-radius:10px;
@@ -55,7 +50,7 @@ body {
 
 h1 {
   font-family: 'Amatic SC', courier;
-  font-size: 3em;
+  font-size: 3rem;
   color: gold;
   margin: 0;
 }
@@ -104,7 +99,7 @@ button:hover{
 
 #cookie {
   padding: 0 2em;
-  max-width: 400px;
+  max-width: 100%;
   height: auto;
 }
 
@@ -125,20 +120,3 @@ a {
 a:hover {
    text-decoration: underline;
 }
-
-@media (min-width: 550px) {
-    /* We tell cookie and isosceles triangle to share a row */
-  .cookieContainer {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1 auto;
-        -ms-flex: 1 auto;
-            flex: 1 auto;
-  }
-  .triangle-isosceles{
-    -webkit-box-flex: 1;
-    -webkit-flex: 1 auto;
-        -ms-flex: 1 auto;
-            flex: 1 auto;
-  }
-}
-
