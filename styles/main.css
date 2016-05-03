@@ -25,7 +25,7 @@ h1 {
   margin: 0;
 }
 
-.cookie {
+#cookie {
   max-width: 100%;
   height: auto;
 }
@@ -48,7 +48,7 @@ h1 {
   bottom: -15px;
   content: "";
   display: block;
-  left: 50px;
+  right: 100px;
   position: absolute;
   width: 0;
 }
